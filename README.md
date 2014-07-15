@@ -23,6 +23,13 @@ ToDO:
 - New ideas
 
 
+How To
+=======
+
+ Use GruntTS to compile code. 
+
+
+
 License
 =======
 
