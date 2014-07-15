@@ -12,7 +12,7 @@ Main features:
 - Data structures.
 - Native and customs events.
 - IE8+, Chrome, Opera, Firefox, Safari.
-- No library dependency.
+- No library dependencies.
 
 
 
