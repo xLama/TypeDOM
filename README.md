@@ -7,11 +7,20 @@ A TypeScript library which allow you get a total control over DOM via typed clas
 Main features:
 =======
 - Class by Tag
-- Own Flexible Event Engine writen from the scratch
+- Own Flexible Event Engine written from the scratch
 - Fluent Interface
 - Data structures
 - Native and customs events
 
+
+
+ToDO:
+=======
+
+- Definitions file
+- Comments and docs
+- Performance improvements
+- New ideas
 
 
 License
