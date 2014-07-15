@@ -11,6 +11,7 @@ Main features:
 - Fluent Interface
 - Data structures
 - Native and customs events
+- IE8+, Chrome, Opera, Firefox, Safari.
 
 
 
