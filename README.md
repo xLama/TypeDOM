@@ -4,8 +4,8 @@ TypeDOM
 A TypeScript library which allow you get a total control over DOM via typed classes
 
 
-Features:
-
+Main features:
+=======
 - Class by Tag
 - Own Flexible Event Engine writen from the scratch
 - Fluent Interface
@@ -14,7 +14,8 @@ Features:
 
 
 
-Licence
+License
+=======
 
 The MIT License (MIT)
 [OSI Approved License]
