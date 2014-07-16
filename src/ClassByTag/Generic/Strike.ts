@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use del instead.Defines strikethrough text
 **/
 
-	class Strike extends Container<Strike> implements  ICloneable<Strike>,IDeprecated  
+	class Strike extends Container<Strike> implements ICloneable<Strike>,IDeprecated  
 	{
 		public static STRIKE: string = 'strike';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Strike.STRIKE);
 		}
 		
+	
 	}

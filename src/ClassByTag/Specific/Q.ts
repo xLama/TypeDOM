@@ -25,7 +25,7 @@
 *Defines a short quotation
 **/
 
-	class Q extends Container<Q> implements  ICloneable<Q>  
+	class Q extends Container<Q> implements ICloneable<Q>  
 	{
 		public static Q: string = 'q';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLQuoteElement {
 			return <HTMLQuoteElement>super.getElement();
 		}
+	
 	}

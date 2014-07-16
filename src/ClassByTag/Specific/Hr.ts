@@ -25,7 +25,7 @@
 * Defines a thematic change in the content
 **/
 
-	class Hr extends Container<Hr> implements  ICloneable<Hr>  
+	class Hr extends Container<Hr> implements ICloneable<Hr>  
 	{
 		public static HR: string = 'hr';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLHRElement {
 			return <HTMLHRElement>super.getElement();
 		}
+	
 	}

@@ -25,7 +25,7 @@
 *Specifies a group of one or more columns in a table for formatting
 **/
 
-	class Colgroup extends Container<Colgroup> implements  ICloneable<Colgroup>  
+	class Colgroup extends Container<Colgroup> implements ICloneable<Colgroup>  
 	{
 		public static COLGROUP: string = 'colgroup';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableColElement {
 			return <HTMLTableColElement>super.getElement();
 		}
+	
 	}

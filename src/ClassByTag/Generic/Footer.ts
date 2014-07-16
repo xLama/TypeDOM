@@ -25,7 +25,7 @@
 *Defines a footer for a document or section
 **/
 
-	class Footer extends Container<Footer> implements  ICloneable<Footer>,IHtml5  
+	class Footer extends Container<Footer> implements ICloneable<Footer>,IHtml5  
 	{
 		public static FOOTER: string = 'footer';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Footer.FOOTER);
 		}
 		
+	
 	}

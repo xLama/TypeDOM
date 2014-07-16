@@ -25,7 +25,7 @@
 *Defines a section in a document
 **/
 
-	class Div extends Container<Div> implements  ICloneable<Div>  
+	class Div extends Container<Div> implements ICloneable<Div>  
 	{
 		public static DIV: string = 'div';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLDivElement {
 			return <HTMLDivElement>super.getElement();
 		}
+	
 	}

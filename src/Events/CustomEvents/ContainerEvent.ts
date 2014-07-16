@@ -23,20 +23,24 @@
 
 
 /// <reference path="../BaseEvent.ts" />
-class ContainerEvent extends BaseEvent{
 
-    public static CHILD_REMOVED: string = "childRemoved";
-    public static CHILD_ADDED: string = "childAdded";
-    public static CHILDREN_ADDED: string = "childrenAdded";
-    public static CHILDREN_REMOVED: string = "childrenRemoved";
+ class ContainerEvent extends BaseEvent
+    {
 
-    public children: ICollection<DOMElement<IDOMElement>>;
+        public static CHILD_REMOVED: string = "childRemoved";
+        public static CHILD_ADDED: string = "childAdded";
+        public static CHILDREN_ADDED: string = "childrenAdded";
+        public static CHILDREN_REMOVED: string = "childrenRemoved";
 
-    constructor(type: string, children: ICollection<DOMElement<IDOMElement>>,  capturable: boolean = true, bubbles: boolean = true, cancelable: boolean = false) {
-        super(type, capturable, bubbles, cancelable);
-        this.children = children;
+        public children: ICollection<IDOMElement>;
+
+        constructor( type: string, children: ICollection<IDOMElement>, capturable: boolean = true, bubbles: boolean = true, cancelable: boolean = false )
+        {
+            super( type, capturable, bubbles, cancelable );
+            this.children = children;
+
+        }
 
     }
 
-}
 

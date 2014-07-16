@@ -25,7 +25,7 @@
 *Not supported in HTML5. Defines an alternate content for users that do not support frames
 **/
 
-	class Noframes extends Container<Noframes> implements  ICloneable<Noframes>,IDeprecated  
+	class Noframes extends Container<Noframes> implements ICloneable<Noframes>,IDeprecated  
 	{
 		public static NOFRAMES: string = 'noframes';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Noframes.NOFRAMES);
 		}
 		
+	
 	}

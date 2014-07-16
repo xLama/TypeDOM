@@ -25,7 +25,7 @@
 *Defines a header for a document or section
 **/
 
-	class Header extends Container<Header> implements  ICloneable<Header>,IHtml5  
+	class Header extends Container<Header> implements ICloneable<Header>,IHtml5  
 	{
 		public static HEADER: string = 'header';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Header.HEADER);
 		}
 		
+	
 	}

@@ -25,7 +25,7 @@
 *Defines an article
 **/
 
-	class Article extends Container<Article> implements  ICloneable<Article>,IHtml5  
+	class Article extends Container<Article> implements ICloneable<Article>,IHtml5  
 	{
 		public static ARTICLE: string = 'article';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Article.ARTICLE);
 		}
 		
+	
 	}

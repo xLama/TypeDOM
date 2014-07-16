@@ -25,7 +25,7 @@
 *Defines metadata about an HTML document
 **/
 
-	class Meta extends Container<Meta> implements  ICloneable<Meta>  
+	class Meta extends Container<Meta> implements ICloneable<Meta>  
 	{
 		public static META: string = 'meta';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLMetaElement {
 			return <HTMLMetaElement>super.getElement();
 		}
+	
 	}

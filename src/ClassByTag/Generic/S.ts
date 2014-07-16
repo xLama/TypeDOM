@@ -25,7 +25,7 @@
 *Defines text that is no longer correct
 **/
 
-	class S extends Container<S> implements  ICloneable<S>  
+	class S extends Container<S> implements ICloneable<S>  
 	{
 		public static S: string = 's';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, S.S);
 		}
 		
+	
 	}

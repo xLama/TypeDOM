@@ -25,7 +25,7 @@
 *Defines a table
 **/
 
-	class Table extends Container<Table> implements  ICloneable<Table>  
+	class Table extends Container<Table> implements ICloneable<Table>  
 	{
 		public static TABLE: string = 'table';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableElement {
 			return <HTMLTableElement>super.getElement();
 		}
+	
 	}

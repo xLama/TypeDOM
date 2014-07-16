@@ -25,7 +25,7 @@
 *Defines the result of a calculation
 **/
 
-	class Output extends Container<Output> implements  ICloneable<Output>,IHtml5  
+	class Output extends Container<Output> implements ICloneable<Output>,IHtml5  
 	{
 		public static OUTPUT: string = 'output';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Output.OUTPUT);
 		}
 		
+	
 	}

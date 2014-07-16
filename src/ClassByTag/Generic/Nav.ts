@@ -25,7 +25,7 @@
 *Defines navigation links
 **/
 
-	class Nav extends Container<Nav> implements  ICloneable<Nav>,IHtml5  
+	class Nav extends Container<Nav> implements ICloneable<Nav>,IHtml5  
 	{
 		public static NAV: string = 'nav';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Nav.NAV);
 		}
 		
+	
 	}

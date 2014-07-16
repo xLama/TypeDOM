@@ -25,7 +25,7 @@
 *Defines an inline frame
 **/
 
-	class Iframe extends Container<Iframe> implements  ICloneable<Iframe>  
+	class Iframe extends Container<Iframe> implements ICloneable<Iframe>  
 	{
 		public static IFRAME: string = 'iframe';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLIFrameElement {
 			return <HTMLIFrameElement>super.getElement();
 		}
+	
 	}

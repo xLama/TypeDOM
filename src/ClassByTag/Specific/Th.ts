@@ -25,7 +25,7 @@
 *Defines a header cell in a table
 **/
 
-	class Th extends Container<Th> implements  ICloneable<Th>  
+	class Th extends Container<Th> implements ICloneable<Th>  
 	{
 		public static TH: string = 'th';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableHeaderCellElement {
 			return <HTMLTableHeaderCellElement>super.getElement();
 		}
-HTMLTableCellElement	}
+	
+	}

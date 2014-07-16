@@ -21,47 +21,43 @@
 * OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+ interface IDOMElement extends IEventDispatcher
+    {
+        getVisualHierarchy(): ICollection<IDOMElement>;
+        getUUID(): string;
+        addTo( container: Container<IDOMElement> ): IDOMElement;
+        removeFromParent(): IDOMElement;
+        setElement( element: HTMLElement ): IDOMElement;
+        getElement(): HTMLElement;
+        setCss( properties: Object ): IDOMElement;
+        //setCss(property: string, value: string): IDOMElement;
+        getParent(): IDOMElement;
+        hasParent(): boolean;
+        getText(): string
+        setText( text: string ): IDOMElement;
+        getAttribute( attr: string ): string;
+        setAttribute( name: string, value: string ): IDOMElement;
+        hasAttribute( name: string ): boolean;
+        hasAttributes(): boolean;
+        removeAttribute( attributeName: string ): IDOMElement;
+        setId( id: string ): IDOMElement;
+        getId(): string;
+        setStyleClassName( className: string ): IDOMElement;
+        getStyleClassName(): string;
+        getTagName(): string;
+        getNodeName(): string;
+        getNodeType(): number;
+        getNodeValue(): string;
+        setNodeValue( nodeValue: string ): IDOMElement;
+        getCss( property: string ): string;
+        getInnerHTML(): string;
+        setInnerHTML( innerHTML: string ): IDOMElement;
+        isSupported( feature: string, version: string ): boolean;
+        isSameNode( DOMElement: IDOMElement ): boolean;
+        isEqualNode( DOMElement: IDOMElement ): boolean;
+        compareDocumentPosition( DOMElement: IDOMElement );
+        getPreviousSibling(): IDOMElement;
+        getNextSibling(): IDOMElement;
+        dispatchEvent( event: BaseEvent ): IDOMElement;
 
-interface IDOMElement extends IEventDispatcher
-{
-    element: HTMLElement;
-
-
-    getVisualHierarchy(): ICollection<IDOMElement>;
-    getUUID(): string;
-    addTo(container: Container<IDOMElement>): IDOMElement;
-    removeFromParent(): IDOMElement;
-    setElement(element: HTMLElement): IDOMElement;
-    getElement(): HTMLElement;
-    setCss(properties: Object): IDOMElement;
-    //setCss(property: string, value: string): IDOMElement;
-    getParent(): IDOMElement;
-    hasParent(): boolean;
-    getText(): string
-    setText(text: string): IDOMElement;
-    getAttribute(attr: string): string;
-    setAttribute(name: string, value: string): IDOMElement;
-    hasAttribute(name: string): boolean;
-    hasAttributes(): boolean;
-    removeAttribute(attributeName: string): IDOMElement;
-    setId(id: string): IDOMElement;
-    getId(): string;
-    setStyleClassName(className: string): IDOMElement;
-    getStyleClassName(): string;
-    getTagName(): string;
-    getNodeName(): string;
-    getNodeType(): number;
-    getNodeValue(): string;
-    setNodeValue(nodeValue: string): IDOMElement;
-    getCss(property: string): string;
-    getInnerHTML(): string;
-    setInnerHTML(innerHTML: string): IDOMElement;
-    isSupported(feature: string, version: string): boolean;
-    isSameNode(DOMElement: IDOMElement): boolean;
-    isEqualNode(DOMElement: IDOMElement): boolean;
-    compareDocumentPosition(DOMElement: IDOMElement);
-    getPreviousSibling(): IDOMElement;
-    getNextSibling(): IDOMElement;
-    dispatchEvent(event: BaseEvent): IDOMElement;
-    
-}
+    }

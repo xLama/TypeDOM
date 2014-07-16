@@ -25,7 +25,7 @@
 *Defines a cell in a table
 **/
 
-	class Td extends Container<Td> implements  ICloneable<Td>  
+	class Td extends Container<Td> implements ICloneable<Td>  
 	{
 		public static TD: string = 'td';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableDataCellElement {
 			return <HTMLTableDataCellElement>super.getElement();
 		}
-HTMLTableCellElement	}
+	
+	}

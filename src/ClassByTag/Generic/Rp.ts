@@ -25,7 +25,7 @@
 *Defines what to show in browsers that do not support ruby annotations
 **/
 
-	class Rp extends Container<Rp> implements  ICloneable<Rp>,IHtml5  
+	class Rp extends Container<Rp> implements ICloneable<Rp>,IHtml5  
 	{
 		public static RP: string = 'rp';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Rp.RP);
 		}
 		
+	
 	}

@@ -22,26 +22,32 @@
 */
 
 /// <reference path="../Base/Container.ts" />
-    class Body extends Container<Body> {
+
+ class Body extends Container<Body> {
 
         private static _instance: Body = null;
         private static unlocked: boolean = false;
-    
-        constructor() {
+
+        constructor()
+        {
             super();
-            if (Body._instance || Body.unlocked == false) {
-                throw new Error("Error: Instantiation failed: Use Body.getInstance() instead of new.");
+            if ( Body._instance || Body.unlocked == false )
+            {
+                throw new Error( "Error: Instantiation failed: Use Body.getInstance() instead of new." );
             }
         }
 
-        public static getInstance(): Body {
-            if (Body._instance == null) {
+        public static getInstance(): Body
+        {
+            if ( Body._instance == null )
+            {
                 Body.unlocked = true;
                 Body._instance = new Body();
                 Body.unlocked = false;
-                Body._instance.setElement(<HTMLBodyElement> document.getElementsByTagName("body")[0]);
+                Body._instance.setElement( <HTMLBodyElement> document.getElementsByTagName( "body" )[0] );
             }
             return Body._instance
         }
     }
+
 

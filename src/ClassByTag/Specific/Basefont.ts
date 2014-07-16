@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use CSS instead.Specifies a default color, size, and font for all text in a document
 **/
 
-	class Basefont extends Container<Basefont> implements  ICloneable<Basefont>,IDeprecated  
+	class Basefont extends Container<Basefont> implements ICloneable<Basefont>,IDeprecated  
 	{
 		public static BASEFONT: string = 'basefont';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLBaseFontElement {
 			return <HTMLBaseFontElement>super.getElement();
 		}
+	
 	}

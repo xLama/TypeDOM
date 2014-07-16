@@ -25,7 +25,7 @@
 *Defines a text that has been inserted into a document
 **/
 
-	class Ins extends Container<Ins> implements  ICloneable<Ins>  
+	class Ins extends Container<Ins> implements ICloneable<Ins>  
 	{
 		public static INS: string = 'ins';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLModElement {
 			return <HTMLModElement>super.getElement();
 		}
+	
 	}

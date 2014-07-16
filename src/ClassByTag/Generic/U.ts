@@ -25,7 +25,7 @@
 *Defines text that should be stylistically different from normal text
 **/
 
-	class U extends Container<U> implements  ICloneable<U>  
+	class U extends Container<U> implements ICloneable<U>  
 	{
 		public static U: string = 'u';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, U.U);
 		}
 		
+	
 	}

@@ -25,7 +25,7 @@
 *Defines the title of a work
 **/
 
-	class Cite extends Container<Cite> implements  ICloneable<Cite>  
+	class Cite extends Container<Cite> implements ICloneable<Cite>  
 	{
 		public static CITE: string = 'cite';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Cite.CITE);
 		}
 		
+	
 	}

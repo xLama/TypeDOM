@@ -25,7 +25,7 @@
 *Defines a caption for a figure element
 **/
 
-	class Figcaption extends Container<Figcaption> implements  ICloneable<Figcaption>,IHtml5  
+	class Figcaption extends Container<Figcaption> implements ICloneable<Figcaption>,IHtml5  
 	{
 		public static FIGCAPTION: string = 'figcaption';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Figcaption.FIGCAPTION);
 		}
 		
+	
 	}

@@ -25,7 +25,7 @@
 *Defines a visible heading for a details element
 **/
 
-	class Summary extends Container<Summary> implements  ICloneable<Summary>,IHtml5  
+	class Summary extends Container<Summary> implements ICloneable<Summary>,IHtml5  
 	{
 		public static SUMMARY: string = 'summary';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Summary.SUMMARY);
 		}
 		
+	
 	}

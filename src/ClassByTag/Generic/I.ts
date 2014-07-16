@@ -25,7 +25,7 @@
 *Defines a part of text in an alternate voice or mood
 **/
 
-	class I extends Container<I> implements  ICloneable<I>  
+	class I extends Container<I> implements ICloneable<I>  
 	{
 		public static I: string = 'i';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, I.I);
 		}
 		
+	
 	}

@@ -23,27 +23,32 @@
 
 
 /// <reference path="../Base/Container.ts" />
-class Head extends Container<Head> {
-     
-    private static instance: Head = null;
-    private static unlocked: boolean = false;
 
-    constructor() {
-        super();
-        if (Head.instance || Head.unlocked == false) {
-            throw new Error("Error: Instantiation failed: Use Head.getInstance() instead of new.");
+   class Head extends Container<Head> {
+
+        private static instance: Head = null;
+        private static unlocked: boolean = false;
+
+        constructor()
+        {
+            super();
+            if ( Head.instance || Head.unlocked == false )
+            {
+                throw new Error( "Error: Instantiation failed: Use Head.getInstance() instead of new." );
+            }
+
+            Head.instance = this;
         }
 
-        Head.instance = this;
-    }
-
-    public static getInstance(): Head {
-        if (Head.instance == null) {
-            Head.unlocked = true;
-            Head.instance = new Head();
-            Head.unlocked = false;
-            Head.instance.setElement(<HTMLHeadElement> document.getElementsByTagName("head")[0]);
+        public static getInstance(): Head
+        {
+            if ( Head.instance == null )
+            {
+                Head.unlocked = true;
+                Head.instance = new Head();
+                Head.unlocked = false;
+                Head.instance.setElement( <HTMLHeadElement> document.getElementsByTagName( "head" )[0] );
+            }
+            return Head.instance;
         }
-        return Head.instance;
     }
-}

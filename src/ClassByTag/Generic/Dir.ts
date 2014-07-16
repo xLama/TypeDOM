@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use ul instead.Defines a directory list
 **/
 
-	class Dir extends Container<Dir> implements  ICloneable<Dir>,IDeprecated  
+	class Dir extends Container<Dir> implements ICloneable<Dir>,IDeprecated  
 	{
 		public static DIR: string = 'dir';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Dir.DIR);
 		}
 		
+	
 	}

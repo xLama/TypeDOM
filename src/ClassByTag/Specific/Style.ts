@@ -25,7 +25,7 @@
 *Defines style information for a document
 **/
 
-	class Style extends Container<Style> implements  ICloneable<Style>  
+	class Style extends Container<Style> implements ICloneable<Style>  
 	{
 		public static STYLE: string = 'style';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLStyleElement {
 			return <HTMLStyleElement>super.getElement();
 		}
+	
 	}

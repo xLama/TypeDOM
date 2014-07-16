@@ -25,7 +25,7 @@
 *Defines a dialog box or window
 **/
 
-	class Dialog extends Container<Dialog> implements  ICloneable<Dialog>,IHtml5  
+	class Dialog extends Container<Dialog> implements ICloneable<Dialog>,IHtml5  
 	{
 		public static DIALOG: string = 'dialog';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Dialog.DIALOG);
 		}
 		
+	
 	}

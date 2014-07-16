@@ -25,7 +25,7 @@
 *Specifies column properties for each column within a colgroup element 
 **/
 
-	class Col extends Container<Col> implements  ICloneable<Col>  
+	class Col extends Container<Col> implements ICloneable<Col>  
 	{
 		public static COL: string = 'col';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableColElement {
 			return <HTMLTableColElement>super.getElement();
 		}
+	
 	}

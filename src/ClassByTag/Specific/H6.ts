@@ -25,7 +25,7 @@
 * Defines HTML headings
 **/
 
-	class H6 extends H<H6> implements  ICloneable<H6>  
+	class H6 extends Container<H6> implements ICloneable<H6>  
 	{
 		public static H6: string = 'h6';
 		
@@ -36,4 +36,14 @@
 		constructor(idOrAttributesOrElement?: any) {
 			super(idOrAttributesOrElement, H6.H6);
 		}
+		
+		public setElement(element: HTMLHeadingElement): H6 {
+			super.setElement(element);
+			return this;
+		}
+		
+		public getElement(): HTMLHeadingElement {
+			return <HTMLHeadingElement>super.getElement();
+		}
+	
 	}

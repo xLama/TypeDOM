@@ -25,7 +25,7 @@
 *Defines additional details that the user can view or hide
 **/
 
-	class Details extends Container<Details> implements  ICloneable<Details>,IHtml5  
+	class Details extends Container<Details> implements ICloneable<Details>,IHtml5  
 	{
 		public static DETAILS: string = 'details';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Details.DETAILS);
 		}
 		
+	
 	}

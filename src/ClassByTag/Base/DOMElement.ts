@@ -23,12 +23,10 @@
 
 
 /// <reference path="EventDispatcher.ts" />
-
-
-     class DOMElement<T extends IDOMElement> extends EventDispatcher implements ICloneable<T>, IDOMElement
+    class DOMElement<T extends IDOMElement> extends EventDispatcher<T> implements ICloneable<T>, IDOMElement
     {
 
-        public element: HTMLElement;
+        private element: HTMLElement;
 
         constructor();
         constructor( element: HTMLElement );
@@ -352,6 +350,7 @@
         }
 
     }
+
 
 
 

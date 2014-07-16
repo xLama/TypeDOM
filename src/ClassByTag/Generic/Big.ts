@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use CSS instead.Defines big text
 **/
 
-	class Big extends Container<Big> implements  ICloneable<Big>,IDeprecated  
+	class Big extends Container<Big> implements ICloneable<Big>,IDeprecated  
 	{
 		public static BIG: string = 'big';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Big.BIG);
 		}
 		
+	
 	}

@@ -25,7 +25,7 @@
 * Defines HTML headings
 **/
 
-	class H2 extends H<H2> implements  ICloneable<H2>  
+	class H2 extends Container<H2> implements ICloneable<H2>  
 	{
 		public static H2: string = 'h2';
 		
@@ -36,5 +36,14 @@
 		constructor(idOrAttributesOrElement?: any) {
 			super(idOrAttributesOrElement, H2.H2);
 		}
-
+		
+		public setElement(element: HTMLHeadingElement): H2 {
+			super.setElement(element);
+			return this;
+		}
+		
+		public getElement(): HTMLHeadingElement {
+			return <HTMLHeadingElement>super.getElement();
+		}
+	
 	}

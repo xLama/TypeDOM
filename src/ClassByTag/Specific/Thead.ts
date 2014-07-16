@@ -25,7 +25,7 @@
 *Groups the header content in a table
 **/
 
-	class Thead extends Container<Thead> implements  ICloneable<Thead>  
+	class Thead extends Container<Thead> implements ICloneable<Thead>  
 	{
 		public static THEAD: string = 'thead';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableSectionElement {
 			return <HTMLTableSectionElement>super.getElement();
 		}
+	
 	}

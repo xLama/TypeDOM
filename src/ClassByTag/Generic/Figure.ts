@@ -25,7 +25,7 @@
 *Specifies self-contained content
 **/
 
-	class Figure extends Container<Figure> implements  ICloneable<Figure>,IHtml5  
+	class Figure extends Container<Figure> implements ICloneable<Figure>,IHtml5  
 	{
 		public static FIGURE: string = 'figure';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Figure.FIGURE);
 		}
 		
+	
 	}

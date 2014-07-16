@@ -25,7 +25,7 @@
 *Defines an input control
 **/
 
-	class Input extends Container<Input> implements  ICloneable<Input>  
+	class Input extends Container<Input> implements ICloneable<Input>  
 	{
 		public static INPUT: string = 'input';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLInputElement {
 			return <HTMLInputElement>super.getElement();
 		}
+	
 	}

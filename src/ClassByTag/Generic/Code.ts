@@ -25,7 +25,7 @@
 *Defines a piece of computer code
 **/
 
-	class Code extends Container<Code> implements  ICloneable<Code>  
+	class Code extends Container<Code> implements ICloneable<Code>  
 	{
 		public static CODE: string = 'code';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Code.CODE);
 		}
 		
+	
 	}

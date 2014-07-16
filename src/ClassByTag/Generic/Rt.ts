@@ -25,7 +25,7 @@
 *Defines an explanation/pronunciation of characters (for East Asian typography)
 **/
 
-	class Rt extends Container<Rt> implements  ICloneable<Rt>,IHtml5  
+	class Rt extends Container<Rt> implements ICloneable<Rt>,IHtml5  
 	{
 		public static RT: string = 'rt';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Rt.RT);
 		}
 		
+	
 	}

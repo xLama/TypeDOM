@@ -25,7 +25,7 @@
 *Defines multiple media resources for media elements (video and audio)
 **/
 
-	class Source extends Container<Source> implements  ICloneable<Source>,IHtml5  
+	class Source extends Container<Source> implements ICloneable<Source>,IHtml5  
 	{
 		public static SOURCE: string = 'source';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLSourceElement {
 			return <HTMLSourceElement>super.getElement();
 		}
+	
 	}

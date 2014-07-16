@@ -25,7 +25,7 @@
 *Defines sample output from a computer program
 **/
 
-	class Samp extends Container<Samp> implements  ICloneable<Samp>  
+	class Samp extends Container<Samp> implements ICloneable<Samp>  
 	{
 		public static SAMP: string = 'samp';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Samp.SAMP);
 		}
 		
+	
 	}

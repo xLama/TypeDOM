@@ -25,7 +25,7 @@
 *Defines an abbreviation
 **/
 
-	class Abbr extends Container<Abbr> implements  ICloneable<Abbr>  
+	class Abbr extends Container<Abbr> implements ICloneable<Abbr>  
 	{
 		public static ABBR: string = 'abbr';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Abbr.ABBR);
 		}
 		
+	
 	}

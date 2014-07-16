@@ -25,7 +25,7 @@
 *Defines a video or movie
 **/
 
-	class Video extends Container<Video> implements  ICloneable<Video>,IHtml5  
+	class Video extends Container<Video> implements ICloneable<Video>,IHtml5  
 	{
 		public static VIDEO: string = 'video';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLVideoElement {
 			return <HTMLVideoElement>super.getElement();
 		}
-HTMLMediaElement	}
+	
+	}

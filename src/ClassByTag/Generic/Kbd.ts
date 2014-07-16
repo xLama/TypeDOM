@@ -25,7 +25,7 @@
 *Defines keyboard input
 **/
 
-	class Kbd extends Container<Kbd> implements  ICloneable<Kbd>  
+	class Kbd extends Container<Kbd> implements ICloneable<Kbd>  
 	{
 		public static KBD: string = 'kbd';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Kbd.KBD);
 		}
 		
+	
 	}

@@ -25,7 +25,7 @@
 *Defines a single line break
 **/
 
-	class Br extends Container<Br> implements  ICloneable<Br>  
+	class Br extends Container<Br> implements ICloneable<Br>  
 	{
 		public static BR: string = 'br';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLBRElement {
 			return <HTMLBRElement>super.getElement();
 		}
+	
 	}

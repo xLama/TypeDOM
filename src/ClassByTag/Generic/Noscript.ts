@@ -25,7 +25,7 @@
 *Defines an alternate content for users that do not support client-side scripts
 **/
 
-	class Noscript extends Container<Noscript> implements  ICloneable<Noscript>  
+	class Noscript extends Container<Noscript> implements ICloneable<Noscript>  
 	{
 		public static NOSCRIPT: string = 'noscript';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Noscript.NOSCRIPT);
 		}
 		
+	
 	}

@@ -25,7 +25,7 @@
 *Defines bold text
 **/
 
-	class B extends Container<B> implements  ICloneable<B>  
+	class B extends Container<B> implements ICloneable<B>  
 	{
 		public static B: string = 'b';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, B.B);
 		}
 		
+	
 	}

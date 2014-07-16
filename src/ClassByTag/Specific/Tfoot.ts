@@ -25,7 +25,7 @@
 *Groups the footer content in a table
 **/
 
-	class Tfoot extends Container<Tfoot> implements  ICloneable<Tfoot>  
+	class Tfoot extends Container<Tfoot> implements ICloneable<Tfoot>  
 	{
 		public static TFOOT: string = 'tfoot';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableSectionElement {
 			return <HTMLTableSectionElement>super.getElement();
 		}
+	
 	}

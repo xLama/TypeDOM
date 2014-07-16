@@ -25,7 +25,7 @@
 *Used to draw graphics, on the fly, via scripting (usually JavaScript)
 **/
 
-	class Canvas extends Container<Canvas> implements  ICloneable<Canvas>,IHtml5  
+	class Canvas extends Container<Canvas> implements ICloneable<Canvas>,IHtml5  
 	{
 		public static CANVAS: string = 'canvas';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLCanvasElement {
 			return <HTMLCanvasElement>super.getElement();
 		}
+	
 	}

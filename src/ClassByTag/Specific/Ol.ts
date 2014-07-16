@@ -25,7 +25,7 @@
 *Defines an ordered list
 **/
 
-	class Ol extends Container<Ol> implements  ICloneable<Ol>  
+	class Ol extends Container<Ol> implements ICloneable<Ol>  
 	{
 		public static OL: string = 'ol';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLOListElement {
 			return <HTMLOListElement>super.getElement();
 		}
+	
 	}

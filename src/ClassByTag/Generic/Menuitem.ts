@@ -25,7 +25,7 @@
 *Defines a command/menu item that the user can invoke from a popup menu
 **/
 
-	class Menuitem extends Container<Menuitem> implements  ICloneable<Menuitem>,IHtml5  
+	class Menuitem extends Container<Menuitem> implements ICloneable<Menuitem>,IHtml5  
 	{
 		public static MENUITEM: string = 'menuitem';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Menuitem.MENUITEM);
 		}
 		
+	
 	}

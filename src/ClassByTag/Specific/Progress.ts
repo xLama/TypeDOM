@@ -25,7 +25,7 @@
 *Represents the progress of a task
 **/
 
-	class Progress extends Container<Progress> implements  ICloneable<Progress>,IHtml5  
+	class Progress extends Container<Progress> implements ICloneable<Progress>,IHtml5  
 	{
 		public static PROGRESS: string = 'progress';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLProgressElement {
 			return <HTMLProgressElement>super.getElement();
 		}
+	
 	}

@@ -25,7 +25,7 @@
 *Defines an HTML form for user input
 **/
 
-	class Form extends Container<Form> implements  ICloneable<Form>  
+	class Form extends Container<Form> implements ICloneable<Form>  
 	{
 		public static FORM: string = 'form';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLFormElement {
 			return <HTMLFormElement>super.getElement();
 		}
+	
 	}

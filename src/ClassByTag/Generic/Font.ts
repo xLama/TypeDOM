@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use CSS instead.Defines font, color, and size for text
 **/
 
-	class Font extends Container<Font> implements  ICloneable<Font>,IDeprecated  
+	class Font extends Container<Font> implements ICloneable<Font>,IDeprecated  
 	{
 		public static FONT: string = 'font';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Font.FONT);
 		}
 		
+	
 	}

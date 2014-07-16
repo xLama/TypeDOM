@@ -25,7 +25,7 @@
 *Defines a title for the document
 **/
 
-	class Title extends Container<Title> implements  ICloneable<Title>  
+	class Title extends Container<Title> implements ICloneable<Title>  
 	{
 		public static TITLE: string = 'title';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTitleElement {
 			return <HTMLTitleElement>super.getElement();
 		}
+	
 	}

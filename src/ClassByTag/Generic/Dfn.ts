@@ -25,7 +25,7 @@
 *Defines a definition term
 **/
 
-	class Dfn extends Container<Dfn> implements  ICloneable<Dfn>  
+	class Dfn extends Container<Dfn> implements ICloneable<Dfn>  
 	{
 		public static DFN: string = 'dfn';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Dfn.DFN);
 		}
 		
+	
 	}

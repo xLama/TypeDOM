@@ -23,32 +23,42 @@
 
 
 /// <reference path="TypeDOM.ts" />
-class EventDispatcher extends TypeDOM implements IEventDispatcher  {
+class EventDispatcher<T extends IEventDispatcher> extends TypeDOM implements IEventDispatcher  {
 
     constructor() {
         super();
     }
 
-    public addEventListener(type: string, listener: Function, scope: any, capture: boolean): void {
-        EventEngine.addEventListener(type, listener, scope, capture, this, -1);
+    public addEventListener(type: string, listener: Function, scope: any, capture: boolean): T {
+        EventEngine.addEventListener( type, listener, scope, capture, this, -1 );
+        return this.returnFunction();
     }
 
-    public addEventListenerXTimes(type: string, listener: Function, scope: any, capture: boolean, times: number): void {
-        EventEngine.addEventListener(type, listener, scope, capture, this, times);
+    public addEventListenerXTimes(type: string, listener: Function, scope: any, capture: boolean, times: number): T {
+        EventEngine.addEventListener( type, listener, scope, capture, this, times );
+        return this.returnFunction();
     }
 
-    public removeEventListener(type: string, listener: Function, capture: boolean): void {
-        EventEngine.removeEventListener(type, listener, capture, this);
+    public removeEventListener(type: string, listener: Function, capture: boolean): T {
+        EventEngine.removeEventListener( type, listener, capture, this );
+        return this.returnFunction();
     }
 
-    public dispatchEvent(event: BaseEvent): void {
+    public dispatchEvent(event: BaseEvent): T {
         event.setTarget(this);
         event.setCurrentTarget(this);
-        EventEngine.dispatchEvent(event);
+        EventEngine.dispatchEvent( event );
+        return this.returnFunction();
     } 
 
     public getUUID(): string {
         return super.getUUID();
+    }
+
+    public returnFunction(): T
+    {
+        var self: IEventDispatcher = this;
+        return <T>self;
     }
  
 } 

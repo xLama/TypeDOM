@@ -25,7 +25,7 @@
 *Isolates a part of text that might be formatted in a different direction from other text outside it
 **/
 
-	class Bdi extends Container<Bdi> implements  ICloneable<Bdi>,IHtml5  
+	class Bdi extends Container<Bdi> implements ICloneable<Bdi>,IHtml5  
 	{
 		public static BDI: string = 'bdi';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Bdi.BDI);
 		}
 		
+	
 	}

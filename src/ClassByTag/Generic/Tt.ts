@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use CSS instead.Defines teletype text
 **/
 
-	class Tt extends Container<Tt> implements  ICloneable<Tt>,IDeprecated  
+	class Tt extends Container<Tt> implements ICloneable<Tt>,IDeprecated  
 	{
 		public static TT: string = 'tt';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Tt.TT);
 		}
 		
+	
 	}

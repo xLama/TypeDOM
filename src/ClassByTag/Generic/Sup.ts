@@ -25,7 +25,7 @@
 *Defines superscripted text
 **/
 
-	class Sup extends Container<Sup> implements  ICloneable<Sup>  
+	class Sup extends Container<Sup> implements ICloneable<Sup>  
 	{
 		public static SUP: string = 'sup';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Sup.SUP);
 		}
 		
+	
 	}

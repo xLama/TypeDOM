@@ -25,7 +25,7 @@
 *Defines a possible line-break
 **/
 
-	class Wbr extends Container<Wbr> implements  ICloneable<Wbr>,IHtml5  
+	class Wbr extends Container<Wbr> implements ICloneable<Wbr>,IHtml5  
 	{
 		public static WBR: string = 'wbr';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Wbr.WBR);
 		}
 		
+	
 	}

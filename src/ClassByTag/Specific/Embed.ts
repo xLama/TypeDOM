@@ -25,7 +25,7 @@
 *Defines a container for an external (non-HTML) application
 **/
 
-	class Embed extends Container<Embed> implements  ICloneable<Embed>,IHtml5  
+	class Embed extends Container<Embed> implements ICloneable<Embed>,IHtml5  
 	{
 		public static EMBED: string = 'embed';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLEmbedElement {
 			return <HTMLEmbedElement>super.getElement();
 		}
+	
 	}

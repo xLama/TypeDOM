@@ -25,7 +25,7 @@
 * Defines HTML headings
 **/
 
-	class H3 extends H<H3> implements  ICloneable<H3>  
+	class H3 extends Container<H3> implements ICloneable<H3>  
 	{
 		public static H3: string = 'h3';
 		
@@ -37,4 +37,13 @@
 			super(idOrAttributesOrElement, H3.H3);
 		}
 		
+		public setElement(element: HTMLHeadingElement): H3 {
+			super.setElement(element);
+			return this;
+		}
+		
+		public getElement(): HTMLHeadingElement {
+			return <HTMLHeadingElement>super.getElement();
+		}
+	
 	}

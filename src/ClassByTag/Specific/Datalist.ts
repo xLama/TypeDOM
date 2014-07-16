@@ -25,7 +25,7 @@
 *Specifies a list of pre-defined options for input controls
 **/
 
-	class Datalist extends Container<Datalist> implements  ICloneable<Datalist>,IHtml5  
+	class Datalist extends Container<Datalist> implements ICloneable<Datalist>,IHtml5  
 	{
 		public static DATALIST: string = 'datalist';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLDataListElement {
 			return <HTMLDataListElement>super.getElement();
 		}
+	
 	}

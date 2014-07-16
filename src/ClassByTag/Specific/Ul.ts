@@ -25,7 +25,7 @@
 *Defines an unordered list
 **/
 
-	class Ul extends Container<Ul> implements  ICloneable<Ul>  
+	class Ul extends Container<Ul> implements ICloneable<Ul>  
 	{
 		public static UL: string = 'ul';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLUListElement {
 			return <HTMLUListElement>super.getElement();
 		}
+	
 	}

@@ -25,7 +25,7 @@
 *Defines a multiline input control (text area)
 **/
 
-	class Textarea extends Container<Textarea> implements  ICloneable<Textarea>  
+	class Textarea extends Container<Textarea> implements ICloneable<Textarea>  
 	{
 		public static TEXTAREA: string = 'textarea';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTextAreaElement {
 			return <HTMLTextAreaElement>super.getElement();
 		}
+	
 	}

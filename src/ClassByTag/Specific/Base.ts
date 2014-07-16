@@ -25,7 +25,7 @@
 *Specifies the base URL/target for all relative URLs in a document
 **/
 
-	class Base extends Container<Base> implements  ICloneable<Base>  
+	class Base extends Container<Base> implements ICloneable<Base>  
 	{
 		public static BASE: string = 'base';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLBaseElement {
 			return <HTMLBaseElement>super.getElement();
 		}
+	
 	}

@@ -25,7 +25,7 @@
 *Defines a section in a document
 **/
 
-	class Span extends Container<Span> implements  ICloneable<Span>  
+	class Span extends Container<Span> implements ICloneable<Span>  
 	{
 		public static SPAN: string = 'span';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLSpanElement {
 			return <HTMLSpanElement>super.getElement();
 		}
+	
 	}

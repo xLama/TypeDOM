@@ -25,7 +25,7 @@
 *Defines a group of related options in a drop-down list
 **/
 
-	class Optgroup extends Container<Optgroup> implements  ICloneable<Optgroup>  
+	class Optgroup extends Container<Optgroup> implements ICloneable<Optgroup>  
 	{
 		public static OPTGROUP: string = 'optgroup';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLOptGroupElement {
 			return <HTMLOptGroupElement>super.getElement();
 		}
+	
 	}

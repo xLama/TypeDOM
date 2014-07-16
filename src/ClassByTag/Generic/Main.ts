@@ -25,7 +25,7 @@
 *Specifies the main content of a document
 **/
 
-	class Main extends Container<Main> implements  ICloneable<Main>,IHtml5  
+	class Main extends Container<Main> implements ICloneable<Main>,IHtml5  
 	{
 		public static MAIN: string = 'main';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Main.MAIN);
 		}
 		
+	
 	}

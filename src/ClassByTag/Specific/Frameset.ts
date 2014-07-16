@@ -25,7 +25,7 @@
 *Not supported in HTML5. Defines a set of frames
 **/
 
-	class Frameset extends Container<Frameset> implements  ICloneable<Frameset>,IDeprecated  
+	class Frameset extends Container<Frameset> implements ICloneable<Frameset>,IDeprecated  
 	{
 		public static FRAMESET: string = 'frameset';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLHeadingElement {
 			return <HTMLHeadingElement>super.getElement();
 		}
+	
 	}

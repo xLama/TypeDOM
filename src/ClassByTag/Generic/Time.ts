@@ -25,7 +25,7 @@
 *Defines a date/time
 **/
 
-	class Time extends Container<Time> implements  ICloneable<Time>,IHtml5  
+	class Time extends Container<Time> implements ICloneable<Time>,IHtml5  
 	{
 		public static TIME: string = 'time';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Time.TIME);
 		}
 		
+	
 	}

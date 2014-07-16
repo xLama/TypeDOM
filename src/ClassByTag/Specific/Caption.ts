@@ -25,7 +25,7 @@
 *Defines a table caption
 **/
 
-	class Caption extends Container<Caption> implements  ICloneable<Caption>  
+	class Caption extends Container<Caption> implements ICloneable<Caption>  
 	{
 		public static CAPTION: string = 'caption';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableCaptionElement {
 			return <HTMLTableCaptionElement>super.getElement();
 		}
+	
 	}

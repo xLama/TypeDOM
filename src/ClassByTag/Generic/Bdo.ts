@@ -25,7 +25,7 @@
 *Overrides the current text direction
 **/
 
-	class Bdo extends Container<Bdo> implements  ICloneable<Bdo>  
+	class Bdo extends Container<Bdo> implements ICloneable<Bdo>  
 	{
 		public static BDO: string = 'bdo';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Bdo.BDO);
 		}
 		
+	
 	}

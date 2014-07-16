@@ -21,29 +21,33 @@
 * OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+  class $
+    {
 
-class $
-{
-
-    public static $(selector: string): Collection<DOMElement<IDOMElement>> {
+        public static $( selector: string ): ICollection<IDOMElement>
+        {
 
             var cleanSelector = selector.trim();
-        var selectedElements: Collection<DOMElement<IDOMElement>> = new Collection<DOMElement<IDOMElement>>();
+            var selectedElements: ICollection<IDOMElement> = new Collection<IDOMElement>();
 
             var idPattern = /#\S+$/;
             var tagPattern = /[A-z]+$/;
 
-            if (cleanSelector.match(idPattern)) {
-                selectedElements.addItem( new DOMElement( document.getElementById( selector.substr( 1, selector.length - 1) ) ) );
-            } else if (cleanSelector.match(tagPattern)) {
-                var nodeList: NodeList = document.getElementsByTagName(cleanSelector);
-                for (var index: number = 0; index < nodeList.length; index++) {
-                    selectedElements.addItem(new DOMElement(<HTMLElement> nodeList.item(index)));
+            if ( cleanSelector.match( idPattern ) )
+            {
+                selectedElements.addItem( new DOMElement( document.getElementById( selector.substr( 1, selector.length - 1 ) ) ) );
+            } else if ( cleanSelector.match( tagPattern ) )
+            {
+                var nodeList: NodeList = document.getElementsByTagName( cleanSelector );
+                for ( var index: number = 0; index < nodeList.length; index++ )
+                {
+                    selectedElements.addItem( new DOMElement( <HTMLElement> nodeList.item( index ) ) );
                 }
-            } else {
-                console.warn("Bad selector");
+            } else
+            {
+                console.warn( "Bad selector" );
             }
 
             return selectedElements;
         }
-}
+    }

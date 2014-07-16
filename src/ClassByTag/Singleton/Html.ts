@@ -25,60 +25,65 @@
 /// <reference path="../Base/Container.ts" />
 class Html extends Container<Html>{
 
-    private static instance: Html = null;
-    private static unlocked: boolean = false;
+        private static instance: Html = null;
+        private static unlocked: boolean = false;
 
-    constructor() {
-        super();
-        if (Html.instance || Html.unlocked == false) {
-            throw new Error("Error: Instantiation failed: Use Html.getInstance() instead of new.");
+        constructor()
+        {
+            super();
+            if ( Html.instance || Html.unlocked == false )
+            {
+                throw new Error( "Error: Instantiation failed: Use Html.getInstance() instead of new." );
+            }
         }
+
+        public static getInstance(): Html
+        {
+            if ( Html.instance == null )
+            {
+                Html.unlocked = true;
+                Html.instance = new Html();
+                Html.unlocked = false;
+                Html.instance.setElement( <HTMLHtmlElement> document.getElementsByTagName( "html" )[0] );
+            }
+            return Html.instance;
+        }
+
+
+        /**
+        * Not supported in HTML. Only for XHTML.
+        **/
+        /*public setXmlns(setXmlns: string): Html {
+
+            this.setAttribute("xmlns", setXmlns);
+            return this;
+        }*/
+
+
+        /**
+        * Not supported in HTML. Only for XHTML.
+        **/
+        /*public getXmlns(): string {
+            return this.getAttribute("xmlns");
+        }*/
+
+
+
+        /**
+       * HTML 5
+       **/
+        /*public setManifest(manifest: string): Html {
+
+            this.setAttribute("manifest", manifest);
+            return this;
+        }*/
+
+
+        /**
+        * HTML 5
+        **/
+        /*public getManifest(): string {
+            return this.getAttribute("manifest");
+        }*/
     }
 
-    public static getInstance(): Html {
-        if (Html.instance == null) {
-            Html.unlocked = true;
-            Html.instance = new Html();
-            Html.unlocked = false;
-            Html.instance.setElement(<HTMLHtmlElement> document.getElementsByTagName("html")[0]);
-        } 
-        return Html.instance;
-    }
-
-
-    /**
-    * Not supported in HTML. Only for XHTML.
-    **/
-    /*public setXmlns(setXmlns: string): Html {
-
-        this.setAttribute("xmlns", setXmlns);
-        return this;
-    }*/
-
-
-    /**
-    * Not supported in HTML. Only for XHTML.
-    **/
-    /*public getXmlns(): string {
-        return this.getAttribute("xmlns");
-    }*/
-
-
-
-    /**
-   * HTML 5
-   **/
-    /*public setManifest(manifest: string): Html {
-
-        this.setAttribute("manifest", manifest);
-        return this;
-    }*/
-
-
-    /**
-    * HTML 5
-    **/
-    /*public getManifest(): string {
-        return this.getAttribute("manifest");
-    }*/
-}

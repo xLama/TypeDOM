@@ -25,7 +25,7 @@
 *Defines a list item
 **/
 
-	class Li extends Container<Li> implements  ICloneable<Li>  
+	class Li extends Container<Li> implements ICloneable<Li>  
 	{
 		public static LI: string = 'li';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLLIElement {
 			return <HTMLLIElement>super.getElement();
 		}
+	
 	}

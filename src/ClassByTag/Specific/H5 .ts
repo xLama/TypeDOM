@@ -25,7 +25,7 @@
 * Defines HTML headings
 **/
 
-	class H5  extends H<H5 > implements  ICloneable<H5 >  
+	class H5  extends Container<H5 > implements ICloneable<H5 >  
 	{
 		public static H5 : string = 'h5 ';
 		
@@ -36,4 +36,14 @@
 		constructor(idOrAttributesOrElement?: any) {
 			super(idOrAttributesOrElement, H5 .H5 );
 		}
+		
+		public setElement(element: HTMLHeadingElement): H5  {
+			super.setElement(element);
+			return this;
+		}
+		
+		public getElement(): HTMLHeadingElement {
+			return <HTMLHeadingElement>super.getElement();
+		}
+	
 	}

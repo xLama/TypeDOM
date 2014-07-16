@@ -25,7 +25,7 @@
 *Not supported in HTML5.Defines a window (a frame) in a frameset
 **/
 
-	class Frame extends Container<Frame> implements  ICloneable<Frame>,IDeprecated  
+	class Frame extends Container<Frame> implements ICloneable<Frame>,IDeprecated  
 	{
 		public static FRAME: string = 'frame';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Frame.FRAME);
 		}
 		
+	
 	}

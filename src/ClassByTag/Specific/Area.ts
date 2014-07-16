@@ -25,7 +25,7 @@
 *Defines an area inside an image-map
 **/
 
-	class Area extends Container<Area> implements  ICloneable<Area>  
+	class Area extends Container<Area> implements ICloneable<Area>  
 	{
 		public static AREA: string = 'area';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLAreaElement {
 			return <HTMLAreaElement>super.getElement();
 		}
+	
 	}

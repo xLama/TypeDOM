@@ -25,7 +25,7 @@
 *Defines a drop-down list
 **/
 
-	class Select extends Container<Select> implements  ICloneable<Select>  
+	class Select extends Container<Select> implements ICloneable<Select>  
 	{
 		public static SELECT: string = 'select';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLSelectElement {
 			return <HTMLSelectElement>super.getElement();
 		}
+	
 	}

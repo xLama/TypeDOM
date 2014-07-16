@@ -25,7 +25,7 @@
 *Defines a clickable button
 **/
 
-	class Button extends Container<Button> implements  ICloneable<Button>  
+	class Button extends Container<Button> implements ICloneable<Button>  
 	{
 		public static BUTTON: string = 'button';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLButtonElement {
 			return <HTMLButtonElement>super.getElement();
 		}
+	
 	}

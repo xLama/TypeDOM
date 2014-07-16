@@ -24,7 +24,7 @@
 
 enum AjaxStates { READY_STATE_UNINITIALIZED, READY_STATE_LOADING, READY_STATE_LOADED, READY_STATE_INTERACTIVE, READY_STATE_COMPLETE }
 
-class Ajax extends NoVisual {
+class Ajax extends NoVisual<Ajax> {
 
     private regExp: RegExp = new RegExp("\/(json|xml)$");
     private dataType: string;

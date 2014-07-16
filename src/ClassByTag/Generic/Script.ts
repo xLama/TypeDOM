@@ -25,7 +25,7 @@
 *Defines a client-side script
 **/
 
-	class Script extends Container<Script> implements  ICloneable<Script>  
+	class Script extends Container<Script> implements ICloneable<Script>  
 	{
 		public static SCRIPT: string = 'script';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Script.SCRIPT);
 		}
 		
+	
 	}

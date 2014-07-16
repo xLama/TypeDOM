@@ -25,7 +25,7 @@
 *Defines a label for an input element
 **/
 
-	class Label extends Container<Label> implements  ICloneable<Label>  
+	class Label extends Container<Label> implements ICloneable<Label>  
 	{
 		public static LABEL: string = 'label';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLLabelElement {
 			return <HTMLLabelElement>super.getElement();
 		}
+	
 	}

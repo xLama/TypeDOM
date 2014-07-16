@@ -25,7 +25,7 @@
 *Defines a paragraph
 **/
 
-	class P extends Container<P> implements  ICloneable<P>  
+	class P extends Container<P> implements ICloneable<P>  
 	{
 		public static P: string = 'p';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLParagraphElement {
 			return <HTMLParagraphElement>super.getElement();
 		}
+	
 	}

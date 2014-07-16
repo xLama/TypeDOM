@@ -25,7 +25,7 @@
 *Defines a list/menu of commands
 **/
 
-	class Menu extends Container<Menu> implements  ICloneable<Menu>  
+	class Menu extends Container<Menu> implements ICloneable<Menu>  
 	{
 		public static MENU: string = 'menu';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Menu.MENU);
 		}
 		
+	
 	}

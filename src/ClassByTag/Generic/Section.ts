@@ -25,7 +25,7 @@
 *Defines a section in a document
 **/
 
-	class Section extends Container<Section> implements  ICloneable<Section>,IHtml5  
+	class Section extends Container<Section> implements ICloneable<Section>,IHtml5  
 	{
 		public static SECTION: string = 'section';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Section.SECTION);
 		}
 		
+	
 	}

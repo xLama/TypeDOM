@@ -25,7 +25,7 @@
 *Groups the body content in a table
 **/
 
-	class Tbody extends Container<Tbody> implements  ICloneable<Tbody>  
+	class Tbody extends Container<Tbody> implements ICloneable<Tbody>  
 	{
 		public static TBODY: string = 'tbody';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableSectionElement {
 			return <HTMLTableSectionElement>super.getElement();
 		}
+	
 	}

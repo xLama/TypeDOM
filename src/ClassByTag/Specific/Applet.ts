@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use object instead.Defines an embedded applet
 **/
 
-	class Applet extends Container<Applet> implements  ICloneable<Applet>,IDeprecated  
+	class Applet extends Container<Applet> implements ICloneable<Applet>,IDeprecated  
 	{
 		public static APPLET: string = 'applet';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLAppletElement {
 			return <HTMLAppletElement>super.getElement();
 		}
+	
 	}

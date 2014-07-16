@@ -25,7 +25,7 @@
 *Defines a scalar measurement within a known range (a gauge)
 **/
 
-	class Meter extends Container<Meter> implements  ICloneable<Meter>,IHtml5  
+	class Meter extends Container<Meter> implements ICloneable<Meter>,IHtml5  
 	{
 		public static METER: string = 'meter';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Meter.METER);
 		}
 		
+	
 	}

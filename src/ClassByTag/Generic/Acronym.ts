@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use abbr instead. Defines an acronym
 **/
 
-	class Acronym extends Container<Acronym> implements  ICloneable<Acronym>,IDeprecated  
+	class Acronym extends Container<Acronym> implements ICloneable<Acronym>,IDeprecated  
 	{
 		public static ACRONYM: string = 'acronym';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Acronym.ACRONYM);
 		}
 		
+	
 	}

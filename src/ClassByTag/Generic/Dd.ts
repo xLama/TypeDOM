@@ -25,7 +25,7 @@
 *Defines a description/value of a term in a description list
 **/
 
-	class Dd extends Container<Dd> implements  ICloneable<Dd>  
+	class Dd extends Container<Dd> implements ICloneable<Dd>  
 	{
 		public static DD: string = 'dd';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Dd.DD);
 		}
 		
+	
 	}

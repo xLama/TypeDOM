@@ -23,9 +23,9 @@
 
 interface IEventDispatcher
 {
-    addEventListener(type: string, listener: Function, scope: IEventDispatcher, capture: boolean, bubbles: boolean): void
-    addEventListenerXTimes(type: string, listener: Function, scope: IEventDispatcher, capture: boolean, times:number): void
-    removeEventListener(type: string, listener: Function, capture: boolean): void;
-    dispatchEvent(event: BaseEvent): void;
+    addEventListener(type: string, listener: Function, scope: IEventDispatcher, capture: boolean, bubbles: boolean): IEventDispatcher
+    addEventListenerXTimes( type: string, listener: Function, scope: IEventDispatcher, capture: boolean, times: number ): IEventDispatcher
+    removeEventListener( type: string, listener: Function, capture: boolean ): IEventDispatcher;
+    dispatchEvent( event: BaseEvent ): IEventDispatcher;
     getUUID(): string;
 }

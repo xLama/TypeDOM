@@ -25,7 +25,7 @@
 *Not supported in HTML5. Use CSS instead.Defines centered text
 **/
 
-	class Center extends Container<Center> implements  ICloneable<Center>,IDeprecated  
+	class Center extends Container<Center> implements ICloneable<Center>,IDeprecated  
 	{
 		public static CENTER: string = 'center';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Center.CENTER);
 		}
 		
+	
 	}

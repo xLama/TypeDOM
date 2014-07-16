@@ -25,7 +25,7 @@
 * Defines HTML headings
 **/
 
-	class H4 extends H<H4> implements  ICloneable<H4>  
+	class H4 extends Container<H4> implements ICloneable<H4>  
 	{
 		public static H4: string = 'h4';
 		
@@ -37,5 +37,13 @@
 			super(idOrAttributesOrElement, H4.H4);
 		}
 		
-        
- }
+		public setElement(element: HTMLHeadingElement): H4 {
+			super.setElement(element);
+			return this;
+		}
+		
+		public getElement(): HTMLHeadingElement {
+			return <HTMLHeadingElement>super.getElement();
+		}
+	
+	}

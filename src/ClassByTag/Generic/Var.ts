@@ -25,7 +25,7 @@
 *Defines a variable
 **/
 
-	class Var extends Container<Var> implements  ICloneable<Var>  
+	class Var extends Container<Var> implements ICloneable<Var>  
 	{
 		public static VAR: string = 'var';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Var.VAR);
 		}
 		
+	
 	}

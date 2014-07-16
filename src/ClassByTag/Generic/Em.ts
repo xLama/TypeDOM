@@ -25,7 +25,7 @@
 *Defines emphasized text 
 **/
 
-	class Em extends Container<Em> implements  ICloneable<Em>  
+	class Em extends Container<Em> implements ICloneable<Em>  
 	{
 		public static EM: string = 'em';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Em.EM);
 		}
 		
+	
 	}

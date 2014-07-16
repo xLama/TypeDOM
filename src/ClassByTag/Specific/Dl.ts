@@ -25,7 +25,7 @@
 *Defines a description list
 **/
 
-	class Dl extends Container<Dl> implements  ICloneable<Dl>  
+	class Dl extends Container<Dl> implements ICloneable<Dl>  
 	{
 		public static DL: string = 'dl';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLDListElement {
 			return <HTMLDListElement>super.getElement();
 		}
+	
 	}

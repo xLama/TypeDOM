@@ -25,7 +25,7 @@
 *Defines a ruby annotation (for East Asian typography)
 **/
 
-	class Ruby extends Container<Ruby> implements  ICloneable<Ruby>,IHtml5  
+	class Ruby extends Container<Ruby> implements ICloneable<Ruby>,IHtml5  
 	{
 		public static RUBY: string = 'ruby';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Ruby.RUBY);
 		}
 		
+	
 	}

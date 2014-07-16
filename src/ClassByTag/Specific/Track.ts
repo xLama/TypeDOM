@@ -25,7 +25,7 @@
 *Defines text tracks for media elements (video and audio)
 **/
 
-	class Track extends Container<Track> implements  ICloneable<Track>,IHtml5  
+	class Track extends Container<Track> implements ICloneable<Track>,IHtml5  
 	{
 		public static TRACK: string = 'track';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTrackElement {
 			return <HTMLTrackElement>super.getElement();
 		}
+	
 	}

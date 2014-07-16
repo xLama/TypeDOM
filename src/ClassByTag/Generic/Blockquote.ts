@@ -25,7 +25,7 @@
 *Defines a section that is quoted from another source
 **/
 
-	class Blockquote extends Container<Blockquote> implements  ICloneable<Blockquote>  
+	class Blockquote extends Container<Blockquote> implements ICloneable<Blockquote>  
 	{
 		public static BLOCKQUOTE: string = 'blockquote';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Blockquote.BLOCKQUOTE);
 		}
 		
+	
 	}

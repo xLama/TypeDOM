@@ -25,7 +25,7 @@
 *Defines an image
 **/
 
-	class Img extends Container<Img> implements  ICloneable<Img>  
+	class Img extends Container<Img> implements ICloneable<Img>  
 	{
 		public static IMG: string = 'img';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLImageElement {
 			return <HTMLImageElement>super.getElement();
 		}
+	
 	}

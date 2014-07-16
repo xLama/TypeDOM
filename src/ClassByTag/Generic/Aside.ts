@@ -25,7 +25,7 @@
 *Defines content aside from the page content
 **/
 
-	class Aside extends Container<Aside> implements  ICloneable<Aside>,IHtml5  
+	class Aside extends Container<Aside> implements ICloneable<Aside>,IHtml5  
 	{
 		public static ASIDE: string = 'aside';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Aside.ASIDE);
 		}
 		
+	
 	}

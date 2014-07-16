@@ -25,7 +25,7 @@
 *Defines preformatted text
 **/
 
-	class Pre extends Container<Pre> implements  ICloneable<Pre>  
+	class Pre extends Container<Pre> implements ICloneable<Pre>  
 	{
 		public static PRE: string = 'pre';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLPreElement {
 			return <HTMLPreElement>super.getElement();
 		}
+	
 	}

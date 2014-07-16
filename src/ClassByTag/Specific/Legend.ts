@@ -25,7 +25,7 @@
 *Defines a caption for a fieldset element
 **/
 
-	class Legend extends Container<Legend> implements  ICloneable<Legend>  
+	class Legend extends Container<Legend> implements ICloneable<Legend>  
 	{
 		public static LEGEND: string = 'legend';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLLegendElement {
 			return <HTMLLegendElement>super.getElement();
 		}
+	
 	}

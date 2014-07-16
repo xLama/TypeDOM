@@ -25,7 +25,7 @@
 *Defines important text
 **/
 
-	class Strong extends Container<Strong> implements  ICloneable<Strong>  
+	class Strong extends Container<Strong> implements ICloneable<Strong>  
 	{
 		public static STRONG: string = 'strong';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Strong.STRONG);
 		}
 		
+	
 	}

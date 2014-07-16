@@ -25,7 +25,7 @@
 *Defines marked/highlighted text
 **/
 
-	class Mark extends Container<Mark> implements  ICloneable<Mark>,IHtml5  
+	class Mark extends Container<Mark> implements ICloneable<Mark>,IHtml5  
 	{
 		public static MARK: string = 'mark';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Mark.MARK);
 		}
 		
+	
 	}

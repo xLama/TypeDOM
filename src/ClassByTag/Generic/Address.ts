@@ -25,7 +25,7 @@
 *Defines contact information for the author/owner of a document
 **/
 
-	class Address extends Container<Address> implements  ICloneable<Address>  
+	class Address extends Container<Address> implements ICloneable<Address>  
 	{
 		public static ADDRESS: string = 'address';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Address.ADDRESS);
 		}
 		
+	
 	}

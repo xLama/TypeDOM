@@ -21,7 +21,7 @@
 * OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-class NoVisual extends EventDispatcher
+class NoVisual<T extends IEventDispatcher> extends EventDispatcher<T>
 {
     constructor() {
         super();

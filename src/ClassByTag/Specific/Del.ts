@@ -25,7 +25,7 @@
 *Defines text that has been deleted from a document
 **/
 
-	class Del extends Container<Del> implements  ICloneable<Del>  
+	class Del extends Container<Del> implements ICloneable<Del>  
 	{
 		public static DEL: string = 'del';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLModElement {
 			return <HTMLModElement>super.getElement();
 		}
+	
 	}

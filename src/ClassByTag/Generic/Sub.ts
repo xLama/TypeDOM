@@ -25,7 +25,7 @@
 *Defines subscripted text
 **/
 
-	class Sub extends Container<Sub> implements  ICloneable<Sub>  
+	class Sub extends Container<Sub> implements ICloneable<Sub>  
 	{
 		public static SUB: string = 'sub';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Sub.SUB);
 		}
 		
+	
 	}

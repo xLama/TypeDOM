@@ -25,7 +25,7 @@
 *Defines a parameter for an object
 **/
 
-	class Param extends Container<Param> implements  ICloneable<Param>  
+	class Param extends Container<Param> implements ICloneable<Param>  
 	{
 		public static PARAM: string = 'param';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLParamElement {
 			return <HTMLParamElement>super.getElement();
 		}
+	
 	}

@@ -25,7 +25,7 @@
 *Defines a key-pair generator field (for forms)
 **/
 
-	class Keygen extends Container<Keygen> implements  ICloneable<Keygen>,IHtml5  
+	class Keygen extends Container<Keygen> implements ICloneable<Keygen>,IHtml5  
 	{
 		public static KEYGEN: string = 'keygen';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Keygen.KEYGEN);
 		}
 		
+	
 	}

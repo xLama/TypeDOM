@@ -22,7 +22,7 @@
 */
 
 
-class Collection<T> extends NoVisual implements ICollection<T>, ICloneable<Collection<T>> {
+class Collection<T> extends EventDispatcher<ICollection<T>> implements ICollection<T>, ICloneable<Collection<T>> {
 
     private source: Array<T>;
 

@@ -25,7 +25,7 @@
 *Defines a row in a table
 **/
 
-	class Tr extends Container<Tr> implements  ICloneable<Tr>  
+	class Tr extends Container<Tr> implements ICloneable<Tr>  
 	{
 		public static TR: string = 'tr';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLTableRowElement {
 			return <HTMLTableRowElement>super.getElement();
 		}
+	
 	}

@@ -25,7 +25,7 @@
 *Defines smaller text
 **/
 
-	class Small extends Container<Small> implements  ICloneable<Small>  
+	class Small extends Container<Small> implements ICloneable<Small>  
 	{
 		public static SMALL: string = 'small';
 		
@@ -37,4 +37,5 @@
 			super(idOrAttributesOrElement, Small.SMALL);
 		}
 		
+	
 	}

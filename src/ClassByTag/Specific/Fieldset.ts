@@ -25,7 +25,7 @@
 *Groups related elements in a form
 **/
 
-	class Fieldset extends Container<Fieldset> implements  ICloneable<Fieldset>  
+	class Fieldset extends Container<Fieldset> implements ICloneable<Fieldset>  
 	{
 		public static FIELDSET: string = 'fieldset';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLFieldSetElement {
 			return <HTMLFieldSetElement>super.getElement();
 		}
+	
 	}

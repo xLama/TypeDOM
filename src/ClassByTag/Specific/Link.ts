@@ -25,7 +25,7 @@
 *Defines the relationship between a document and an external resource (most used to link to style sheets)
 **/
 
-	class Link extends Container<Link> implements  ICloneable<Link>  
+	class Link extends Container<Link> implements ICloneable<Link>  
 	{
 		public static LINK: string = 'link';
 		
@@ -45,4 +45,5 @@
 		public getElement(): HTMLLinkElement {
 			return <HTMLLinkElement>super.getElement();
 		}
+	
 	}

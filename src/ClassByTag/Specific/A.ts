@@ -25,7 +25,7 @@
 *Defines a hyperlink
 **/
 
-	class A extends Container<A> implements  ICloneable<A>  
+	class A extends Container<A> implements ICloneable<A>  
 	{
 		public static A: string = 'a';
 		
@@ -45,14 +45,13 @@
 		public getElement(): HTMLAnchorElement {
 			return <HTMLAnchorElement>super.getElement();
 		}
+
+		public getHref() : string {
+			return this.getElement().href;
+		}
 		
-		public setHref(href: string): A  
-		{
+		public setHref(href : string) : A{
 			this.getElement().href = href;
 			return this;
-		}
-
-		public getHref(): string {
-			return this.getElement().href;
 		}	
 	}
