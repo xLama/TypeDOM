@@ -38,17 +38,17 @@
 
 
 
-        public addChild( child: IDOMElement ): IDOMElement
+        public addChild( child: IDOMElement ): T
         {
             this.childCheck( child );
             this.getElement().appendChild( child.getElement() );
             this.dispatchEvent( new ContainerEvent( ContainerEvent.CHILD_ADDED, new Collection( [child] ), true, false, true ) );
-            return this;
+            return this.returnFunction();
         } 
 
-	    public addChildren( children: ICollection<IDOMElement> ): IDOMElement
-	    public addChildren( children: Array<IDOMElement> ): IDOMElement
-	    public addChildren( children: any ): IDOMElement
+	    public addChildren( children: ICollection<IDOMElement> ): T
+	    public addChildren( children: Array<IDOMElement> ): T
+	    public addChildren( children: any ): T
         {
 
             this.childCheck( children );
@@ -64,17 +64,18 @@
                 this.dispatchEvent( new ContainerEvent( ContainerEvent.CHILDREN_ADDED, new Collection<IDOMElement>( childrenToAdd ), true, false, true ) );
             }
 
-            return this;
+            return this.returnFunction();
         }
 
-        public removeChild( child: IDOMElement ): void
+       public removeChild( child: IDOMElement ): T
         {
             this.childCheck( child );
             this.getElement().removeChild( child.getElement() );
-            this.dispatchEvent( new ContainerEvent( ContainerEvent.CHILD_REMOVED, new Collection<IDOMElement>( [child] ), true, false, true ) );
+           this.dispatchEvent( new ContainerEvent( ContainerEvent.CHILD_REMOVED, new Collection<IDOMElement>( [child] ), true, false, true ) );
+           return this.returnFunction();
         }
 
-        public removeAllChildren(): void
+       public removeAllChildren(): T
         {
             for ( var i: number = this.getElement().children.length - 1; i >= 0; --i )
             {
@@ -84,6 +85,7 @@
             {
                 this.dispatchEvent( new ContainerEvent( ContainerEvent.CHILDREN_REMOVED, new Collection<IDOMElement>(), true, false, true ) );
             }
+           return this.returnFunction();
         }
 
         public contains( child: IDOMElement ): boolean
@@ -92,9 +94,10 @@
             return this.getElement().contains( child.getElement() );
         }
 
-        public removeChildAt( index: number ): void
+       public removeChildAt( index: number ): T
         {
-            this.getElement().removeChild( this.getElement().childNodes[index] );
+           this.getElement().removeChild( this.getElement().childNodes[index] );
+           return this.returnFunction();
         }
 
         public getChildren(): ArrayCollection<IDOMElement>
@@ -118,18 +121,20 @@
         }
 
 
-        public insertBefore( newElement: IDOMElement, oldElement: IDOMElement ): void
+       public insertBefore( newElement: IDOMElement, oldElement: IDOMElement ): T
         {
             this.childCheck( newElement );
             this.childCheck( oldElement );
             this.getElement().insertBefore( newElement.getElement(), oldElement.getElement() );
+            return this.returnFunction();
         }
 
-        public replaceChild( newElement:IDOMElement, oldElement: IDOMElement ): void
+       public replaceChild( newElement: IDOMElement, oldElement: IDOMElement ): T
         {
             this.childCheck( newElement );
             this.childCheck( oldElement );
-            this.getElement().insertBefore( newElement.getElement(), oldElement.getElement() );
+           this.getElement().insertBefore( newElement.getElement(), oldElement.getElement() );
+           return this.returnFunction();
         }
 
 
@@ -148,16 +153,18 @@
         }
 
 
-        public sort( comparator: Comparator<IDOMElement> ): void
+       public sort( comparator: Comparator<IDOMElement> ): T
         {
-            this.addChildren( this.getChildren().sort( comparator ) );
+           this.addChildren( this.getChildren().sort( comparator ) );
+           return this.returnFunction();
         }
 
-        public filter( func: ( value: IDOMElement ) => boolean ): void
+        public filter( func: ( value: IDOMElement ) => boolean ): T
         {
             var childrenFiltered: ArrayCollection<IDOMElement> = this.getChildren().filter( func );
             this.removeAllChildren();
             this.addChildren( childrenFiltered );
+            return this.returnFunction();
         }
 
 
@@ -170,6 +177,5 @@
         {
             if ( index < 0 ) throw TypeError( "Index out of bound" );
         }
-
 
     }
