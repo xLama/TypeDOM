@@ -23,10 +23,10 @@
 
 
 /// <reference path="EventDispatcher.ts" />
-    class DOMElement<T extends IDOMElement> extends EventDispatcher<T> implements ICloneable<T>, IDOMElement
+    class DOMElement<T extends IDOMElement, V extends HTMLElement> extends EventDispatcher<T> implements ICloneable<T>, IDOMElement
     {
 
-        private element: HTMLElement;
+        private element: V;
 
         constructor();
         constructor( element: HTMLElement );
@@ -38,7 +38,7 @@
 
             if ( tag )
             {
-                this.setElement( document.createElement( tag ) );
+                this.setElement( <V>document.createElement( tag ) );
             }
 
             if ( idOrAttributesOrElement )
@@ -56,10 +56,7 @@
 
                 else
                 {
-                    for ( var key in idOrAttributesOrElement )
-                    {
-                        this.getElement()[key] = idOrAttributesOrElement[key];
-                    }
+                    this.setAttribute( idOrAttributesOrElement );
                 }
             }
         }
@@ -86,7 +83,7 @@
             return this.getElement()["uuid"];
         }
 
-        public setElement( element: HTMLElement ): T
+        public setElement( element: V ): T
         {
             this.element = element;
             if ( this.element["uuid"] == null )
@@ -97,7 +94,7 @@
         }
 
 
-        public getElement(): HTMLElement
+        public getElement(): V
         {
             return this.element;
         }
@@ -109,7 +106,7 @@
             return <T>self;
         }
 
-        public addTo( container: Container<IDOMElement> ): T
+        public addTo( container: Container<IDOMElement, HTMLElement> ): T
         {
             container.addChild( this );
             return this.returnFunction();
@@ -179,9 +176,25 @@
             return this.getElement().attributes.getNamedItem( attr ).value;
         }
 
+
+        public setAttribute( attributes: Object): T
         public setAttribute( name: string, value: string ): T
+        public setAttribute( attributesOrName: any, value?: string ): T
         {
-            this.getElement().setAttribute( name, value );
+            if ( attributesOrName == null) throw new TypeError( "Null" );
+
+            if ( attributesOrName instanceof String && value != null )
+            {
+                this.getElement().setAttribute( name, value );
+            }
+            else
+            {
+                for ( var key in attributesOrName )
+                {
+                    this.getElement()[key] = attributesOrName[key];
+                }
+            }
+            
             return this.returnFunction();
         }
 

@@ -20,24 +20,3 @@
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 * OR OTHER DEALINGS IN THE SOFTWARE.
 */
-
-/**
- * The {{#crossLink "Code"}}{{/crossLink}} Defines a piece of computer code
- *
- * @class Code
- * @extends Container
- * @constructor
- **/
-class Code extends Container<Code, HTMLElement>  
-{
-	public static CODE: string = 'code';
-		
-	constructor();
-	constructor(id: string)
-	constructor(attributes: Object)
-	constructor(element: HTMLElement)
-	constructor(idOrAttributesOrElement?: any) {
-		super(idOrAttributesOrElement, Code.CODE);
-	}	
-	
-}

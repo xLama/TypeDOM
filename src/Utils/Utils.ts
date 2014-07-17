@@ -25,11 +25,9 @@
 class Utils
 {
 
-    // This code is not mine. I found it on th web. I am look for author.
+    // This code is not mine. I found it on th web. I am looking for author.
     public static generateRandomUUID():string {
 
-
-        
         var CHARS:string[] = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
         var chars = CHARS,
             uuid = ['','','','','','','','','-','','','','','-','4','','','','-','','','','','-','','','','','','','','','','','',''],

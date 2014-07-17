@@ -23,7 +23,7 @@
 
 
 /// <reference path="../Base/Container.ts" />
-class Html extends Container<Html>{
+class Html extends Container<Html, HTMLHtmlElement>{
 
         private static instance: Html = null;
         private static unlocked: boolean = false;

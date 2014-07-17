@@ -25,7 +25,7 @@
 
 /// <reference path="DOMElement.ts" />
 
-   class Container<T extends IDOMElement> extends DOMElement<T>  {
+   class Container<T extends IDOMElement, V extends HTMLElement> extends DOMElement<T,V>  {
 
         constructor();
         constructor( element: HTMLElement );
@@ -135,14 +135,14 @@
 
         public getLastChild(): IDOMElement
         {
-            var element: IDOMElement = new DOMElement<IDOMElement>();
+            var element: IDOMElement = new DOMElement();
             element.setElement( <HTMLElement>this.getElement().lastChild );
             return element;
         }
 
         public getFirstChild(): IDOMElement
         {
-            var element: IDOMElement = new DOMElement<IDOMElement>();
+            var element: IDOMElement = new DOMElement();
             element.setElement( <HTMLElement>this.getElement().firstChild );
             return element;
         }

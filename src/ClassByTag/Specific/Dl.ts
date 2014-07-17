@@ -3,7 +3,7 @@
 *
 * Permission is hereby granted, free of charge, to any person
 * obtaining a copy of this software and associated documentation
-* files (the "Software"), to deal in the Software without restriction,
+* files (the \"Software\"), to deal in the Software without restriction,
 * including without limitation the rights to use, copy, modify, merge,
 * publish, distribute, sublicense, and/or sell copies of the Software,
 * and to permit persons to whom the Software is furnished to do so,
@@ -12,38 +12,32 @@
 * The above copyright notice and this permission notice shall be
 * included in all copies or substantial portions of the Software.
 *
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,
 * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
 * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
 * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 * OR OTHER DEALINGS IN THE SOFTWARE.
-*/ 
+*/
 
 /**
-*Defines a description list
-**/
-
-	class Dl extends Container<Dl> implements ICloneable<Dl>  
-	{
-		public static DL: string = 'dl';
+ * The {{#crossLink "Dl"}}{{/crossLink}} Defines a description list
+ *
+ * @class Dl
+ * @extends Container
+ * @constructor
+ **/
+class Dl extends Container<Dl, HTMLDListElement>  
+{
+	public static DL: string = 'dl';
 		
-		constructor();
-		constructor(id: string)
-		constructor(attributes: Object)
-		constructor(element: HTMLDListElement)
-		constructor(idOrAttributesOrElement?: any) {
-			super(idOrAttributesOrElement, Dl.DL);
-		}
-		
-		public setElement(element: HTMLDListElement): Dl {
-			super.setElement(element);
-			return this;
-		}
-		
-		public getElement(): HTMLDListElement {
-			return <HTMLDListElement>super.getElement();
-		}
+	constructor();
+	constructor(id: string)
+	constructor(attributes: Object)
+	constructor(element: HTMLDListElement)
+	constructor(idOrAttributesOrElement?: any) {
+		super(idOrAttributesOrElement, Dl.DL);
+	}	
 	
-	}
+}

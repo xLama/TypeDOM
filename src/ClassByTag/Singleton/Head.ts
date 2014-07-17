@@ -24,7 +24,7 @@
 
 /// <reference path="../Base/Container.ts" />
 
-   class Head extends Container<Head> {
+   class Head extends Container<Head, HTMLHeadElement> {
 
         private static instance: Head = null;
         private static unlocked: boolean = false;

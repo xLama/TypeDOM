@@ -21,9 +21,24 @@
 * OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-
+/**
+ * The {{#crossLink "Collection"}}{{/crossLink}} is the base class for Collection structures
+ *
+ * @class Collection
+ * @extends EventDispatcher
+ * @constructor
+ **/
 class Collection<T> extends EventDispatcher<ICollection<T>> implements ICollection<T>, ICloneable<Collection<T>> {
 
+
+    /**
+     * Wrapped property
+     *
+     * @property source
+     * @type {Array}
+     * @default null
+     * @private
+     */
     private source: Array<T>;
 
     constructor();
@@ -49,10 +64,26 @@ class Collection<T> extends EventDispatcher<ICollection<T>> implements ICollecti
     }
 
 
+    /**
+     * Returns wrapped property source
+     *
+     * @method toArray
+     * @public
+     * @returns {Array<T>} Array
+     */
     public toArray(): Array<T> {
         return this.source;
     }
 
+
+    /**
+     * Add an item to the end of the Collection
+     *
+     * @method addItem
+     * @public
+     * @param item {T} Item to add.
+     * @returns {number} The index
+     */
     public addItem(item: T): number {
         this.itemCheck(item);
 
@@ -61,7 +92,15 @@ class Collection<T> extends EventDispatcher<ICollection<T>> implements ICollecti
         return index - 1;
     }
 
-
+    /**
+     * Add an item 
+     *
+     * @method addItemAt
+     * @public
+     * @param item {T} Item to add.
+     * @param index {number} Index.
+     * @returns {number} The index
+     */
     public addItemAt(item: T, index: number): number {
         this.itemCheck(item);
         this.indexCheck(index);
@@ -71,6 +110,14 @@ class Collection<T> extends EventDispatcher<ICollection<T>> implements ICollecti
         return index;
     }
 
+    /**
+     * Add all items to Collection
+     *
+     * @method addAll
+     * @public
+     * @param list {Array<T>} Items to add from Array.
+     * @param list {ICollection<T>} Items to add from IList.
+     */
     public addAll(list: Array<T>): void
     public addAll(list: ICollection<T>): void
     public addAll(list?: any): void {
@@ -100,11 +147,26 @@ class Collection<T> extends EventDispatcher<ICollection<T>> implements ICollecti
             }
     }
 
+    /**
+     * Returns an item via index
+     *
+     * @method getItemAt
+     * @public
+     * @param index {number} Index
+     * @returns index {T} Selected item
+     */
     public getItemAt(index: number): T {
         return this.source[index];
     }
 
-
+    /**
+     * Returns item index
+     *
+     * @method getItemIndex
+     * @public
+     * @param item {T} Item to search
+     * @returns {number} Index
+     */
     public getItemIndex(item: T): number {
         this.itemCheck(item);
 
@@ -127,18 +189,44 @@ class Collection<T> extends EventDispatcher<ICollection<T>> implements ICollecti
         return index;
     }
 
+
+    /**
+     * Remove all Collection items
+     *
+     * @method removeAll
+     * @public
+     * @returns  {Collection<T>} Returns itself
+     */
     public removeAll(): Collection<T> {
         this.source = new Array<T>();
         this.dispatchCollectionChange();
         return this;
     }
 
-    public removeItemAt(index: number): void {
+    /**
+     * Removes items via index
+     *
+     * @method removeItemAt
+     * @public
+     * @param index {number} Index
+     * @returns  {Collection<T>} Returns itself
+     */
+    public removeItemAt( index: number ): Collection<T> {
         this.indexCheck(index);
         this.source.splice(index, 1);
         this.dispatchCollectionChange();
+        return this;
     }
 
+
+    /**
+     * Checks if Collection contains an item
+     *
+     * @method contains
+     * @public
+     * @param item {T} Item to check
+     * @returns  {boolean} True if Collection contains item. False if not.
+     */
     public contains(item: T): boolean {
         this.itemCheck(item);
         if (this.getItemIndex(item) != -1) return true;
@@ -146,24 +234,62 @@ class Collection<T> extends EventDispatcher<ICollection<T>> implements ICollecti
        
     }
 
+    /**
+     * Returns Collection length
+     *
+     * @method getLength
+     * @public
+     * @returns  {number} Number of items
+     */
     public getLength(): number {
         return this.source.length;
     }
 	
+
+    /**
+     * Check if Collection is empty
+     *
+     * @method isEmpty
+     * @public
+     * @returns  {boolean} True if Collection is empty. False if not.
+     */
 	public isEmpty():boolean{
 		return this.getLength() == 0;
     }
 
 
+    /**
+     * Check if Collection has items
+     *
+     * @method hasItems
+     * @public
+     * @returns  {boolean} True if Collection has items. False if not.
+     */
     public hasItems(): boolean {
         return !this.isEmpty();
     }
 
-    public reverse(): void {
+
+    /**
+     * Reverse Collection
+     *
+     * @method reverse
+     * @public
+     * @returns  {Collection<T>} Returns itself
+     */
+    public reverse(): Collection<T> {
         this.source = this.toArray().reverse();
+        return this;
     }
 
 
+    /**
+     * Clone Collection
+     *
+     * @method clone
+     * @public
+     * @returns  {Collection<T>} Returns itself
+     */
     public clone(): Collection<T> {
         return new Collection<T>(this.toArray().slice(0));
     }

@@ -23,7 +23,7 @@
 
 /// <reference path="../Base/Container.ts" />
 
- class Body extends Container<Body> {
+ class Body extends Container<Body, HTMLBodyElement> {
 
         private static _instance: Body = null;
         private static unlocked: boolean = false;

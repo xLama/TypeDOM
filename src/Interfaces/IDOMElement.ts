@@ -25,7 +25,7 @@
     {
         getVisualHierarchy(): ICollection<IDOMElement>;
         getUUID(): string;
-        addTo( container: Container<IDOMElement> ): IDOMElement;
+        addTo( container: Container<IDOMElement, HTMLElement> ): IDOMElement;
         removeFromParent(): IDOMElement;
         setElement( element: HTMLElement ): IDOMElement;
         getElement(): HTMLElement;
